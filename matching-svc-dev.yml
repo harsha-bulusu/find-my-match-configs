@@ -2,3 +2,19 @@ user:
   mgmt:
     service:
       url: http://localhost:8081
+
+eureka:
+  instance:
+    appname: ${spring.cloud.config.name}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
