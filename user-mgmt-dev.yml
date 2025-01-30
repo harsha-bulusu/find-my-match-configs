@@ -32,7 +32,7 @@ spring:
 
 eureka:
   instance:
-    appname: ${spring.cloud.config.name}
+#    appname: ${spring.cloud.config.name}
     prefer-ip-address: true
   client:
     service-url:
