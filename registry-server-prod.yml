@@ -2,8 +2,12 @@ eureka:
   instance:
     hostname: eureka-server
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/,http://eureka-server2:8761/eureka/
+    server:
+      registry-sync-retries: 3
 
 management:
   endpoints:
@@ -13,7 +17,7 @@ management:
   health:
     readiness-state:
       enabled: true
-    liveness-state:
+    liveliness-state:
       enabled: true
   endpoint:
     health:

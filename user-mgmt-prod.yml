@@ -31,11 +31,11 @@ spring:
     show-sql: true
 
 eureka:
-  instance:
-    prefer-ip-address: true
+#  instance:
+#    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka,http://eureka-server2:8761/eureka
 
 management:
   endpoints:
